@@ -32,6 +32,7 @@ public class StudentController {
 
 
     @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(
             summary = "Create Student",
             description = "Creates a new student in the CampusHub system"
