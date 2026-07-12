@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Students</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👨‍🎓 Student Management</h1>
+
+    <!-- Add Student -->
+
+    <div class="card">
+
+        <h2>Add / Update Student</h2>
+
+        <div class="form-grid">
+
+            <input type="text" id="registrationNumber" placeholder="Registration Number">
+
+            <input type="text" id="firstName" placeholder="First Name">
+
+            <input type="text" id="lastName" placeholder="Last Name">
+
+            <input type="email" id="email" placeholder="Email">
+
+            <input type="text" id="phoneNumber" placeholder="Phone Number">
+
+            <input type="date" id="dateOfBirth">
+
+            <select id="gender">
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+            </select>
+
+            <input type="password" id="password" placeholder="Password">
+
+            <select id="role">
+                <option value="ROLE_USER">User</option>
+                <option value="ROLE_ADMIN">Admin</option>
+            </select>
+
+        </div>
+
+        <button id="saveButton" onclick="saveStudent()">
+
+            Save Student
+
+        </button>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="card" id="studentFormCard">
+
+        <h2>Search Student</h2>
+
+        <input
+                type="text"
+                id="searchName"
+                placeholder="Enter First Name">
+
+        <button onclick="searchStudent()">
+
+            Search
+
+        </button>
+
+        <button onclick="showAllStudents()">
+
+            Show All
+
+        </button>
+
+    </div>
+
+    <!-- Table -->
+
+    <div class="card">
+
+        <h2>Students List</h2>
+
+        <table id="studentTable">
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Email</th>
+
+                <th>Action</th>
+
+            </tr>
+
+        </table>
+
+        <div class="pagination">
+
+            <button onclick="previousPage()">
+
+                Previous
+
+            </button>
+
+            <span id="pageNumber">
+
+                Page 1
+
+            </span>
+
+            <button onclick="nextPage()">
+
+                Next
+
+            </button>
+
+            <br><br>
+            <button onclick="location.href='dashboard.html'">
+
+                Back
+
+            </button>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="js/student.js"></script>
+
+
+</body>
+
+</html>
