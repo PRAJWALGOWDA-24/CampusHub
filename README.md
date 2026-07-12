@@ -276,8 +276,11 @@ Swagger UI
 ### Local Development
 http://localhost:8080/swagger-ui/index.html
 
-### Live Deployment
-https://campushub-49ry.onrender.com/swagger-ui/index.html
+
+###Live Application:
+ https://campushub-49ry.onrender.com/login.html
+###Swagger API
+ https://campushub-49ry.onrender.com/swagger-ui/index.html
 ```
 
 ---
