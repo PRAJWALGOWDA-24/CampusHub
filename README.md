@@ -349,21 +349,12 @@ Tested Components
 
 # 📸 Screenshots
 
-Add screenshots of the application here.
-
-Example
-
-```
-screenshots/
-│
-├── login.png
-├── dashboard.png
-├── students.png
-├── student-details.png
-├── ai-chat.png
-└── swagger.png
-```
-
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
 ---
 
 # 👨‍💻 Author
