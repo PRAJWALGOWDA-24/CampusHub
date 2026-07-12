@@ -1,3 +1,4 @@
+const BASE_URL = window.location.origin;
 async function askAI() {
 
     const question =
@@ -15,7 +16,7 @@ async function askAI() {
 
     const response = await fetch(
 
-        "http://localhost:8080/ai/chat",
+       BASE_URL + "/ai/chat",
 
         {
 

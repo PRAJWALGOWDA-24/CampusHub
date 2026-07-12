@@ -1,3 +1,5 @@
+const BASE_URL = window.location.origin;
+
 const token = localStorage.getItem("token");
 
 const params = new URLSearchParams(window.location.search);
@@ -10,7 +12,7 @@ async function loadStudent(){
 
     const response = await fetch(
 
-        "http://localhost:8080/students/" + id,
+       BASE_URL +"/students/" + id,
 
         {
 

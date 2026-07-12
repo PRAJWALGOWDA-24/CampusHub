@@ -1,39 +1,30 @@
-
-console.log("login.js loaded");
-
+const BASE_URL = window.location.origin;
 
 async function login() {
 
-    const email =
-        document.getElementById("email").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-    const password =
-        document.getElementById("password").value;
-
-const response = await fetch(
-    "http://localhost:8080/auth/login",
-    {
+    const response = await fetch(BASE_URL + "/auth/login", {
         method: "POST",
         headers: {
-            "Content-Type":"application/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             email,
             password
         })
+    });
+
+    if (!response.ok) {
+        alert("Invalid email or password.");
+        return;
     }
-);
 
-const data = await response.json();
+    const data = await response.json();
 
-console.log(data);
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("role", data.role);
 
-// Save JWT
-localStorage.setItem("token", data.token);
-localStorage.setItem("role", data.role);
-
-console.log("Role :", data.role);
-
-// Redirect
-window.location.href = "dashboard.html";
+    window.location.href = "dashboard.html";
 }

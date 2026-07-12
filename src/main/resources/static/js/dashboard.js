@@ -1,3 +1,5 @@
+const BASE_URL = window.location.origin;
+
 const role = localStorage.getItem("role");
 
 window.onload = function(){

@@ -1,6 +1,7 @@
 
 let selectedStudentId = null;
 let currentPage = 0;
+const BASE_URL = window.location.origin;
 
 
 const pageSize = 5;
@@ -15,7 +16,7 @@ async function loadStudents() {
 
     const response = await fetch(
 
-        "http://localhost:8080/students/page?page="
+        BASE_URL +"/students/page?page="
 
         + currentPage +
 
@@ -88,7 +89,7 @@ async function saveStudent() {
     console.log(student);
 
     const response = await fetch(
-        "http://localhost:8080/students",
+        BASE_URL+ "/students",
         {
 
             method: "POST",
@@ -166,7 +167,7 @@ if(role !== "ROLE_ADMIN"){
 
     const response = await fetch(
 
-        "http://localhost:8080/students/" + id,
+        BASE_URL +"/students/" + id,
 
         {
 
@@ -210,7 +211,7 @@ if(role !== "ROLE_ADMIN"){
 
     const response = await fetch(
 
-        "http://localhost:8080/students/" + id,
+        BASE_URL +"/students/" + id,
 
         {
 
@@ -298,7 +299,7 @@ async function updateStudent() {
 
     const response = await fetch(
 
-        "http://localhost:8080/students/" + selectedStudentId,
+        BASE_URL +"/students/" + selectedStudentId,
 
         {
 
@@ -427,7 +428,7 @@ async function searchStudent() {
 
     const response = await fetch(
 
-        "http://localhost:8080/students/search?firstName=" + firstName,
+       BASE_URL +"/students/search?firstName=" + firstName,
 
         {
 
@@ -513,7 +514,7 @@ async function resetPassword(id){
 
     const response = await fetch(
 
-        "http://localhost:8080/students/"
+       BASE_URL +"/students/"
         + id +
         "/reset-password",
 
